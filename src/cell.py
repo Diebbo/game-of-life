@@ -9,5 +9,11 @@ class Cell:
     self.x = x
     self.y = y
 
+  def setAlive(self):
+    self.state = True
+    
+  def setDead(self):
+    self.state = False
+
   def isAlive(self):
     return self.state
