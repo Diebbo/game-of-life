@@ -1,6 +1,6 @@
 import unittest
-from board import Board
-from cell import Cell
+from game.board import Board
+from game.cell import Cell
 
 class TestBoard(unittest.TestCase):
     def test_board(self):
