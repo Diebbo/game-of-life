@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game of Life</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+        .game {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .game_board {
+            border-collapse: collapse;
+        }
+        .cell {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #333;
+            background-color: white;
+            cursor: pointer;
+        }
+        .cell.alive {
+            background-color: black;
+        }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Game of Life</h1>
+        </div>
+        <div class="content">
+            <div class="game">
+                <table class="game_board">
+                    <tbody id="gameBoard"></tbody>
+                </table>
+                <div class="controls">
+                    <button id="startBtn" class="btn">Start</button>
+                    <button id="resetBtn" class="btn">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+		<script src="game.js">
+		</script>
+</body>
+</html>
